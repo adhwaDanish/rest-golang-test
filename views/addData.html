@@ -1,0 +1,16 @@
+{{define "addData"}}
+<html>
+    <h2>Add Users</h2>
+    <a href="/">list of users</a>
+    <form method="POST" action="/addUsers">
+        <table>
+            <tr><th>Key in Users data</th></tr>
+            <tr><td><input type="text" name="fullName" placeholder="Full Name"></td></tr>
+            <tr><td><input type="text" name="email" placeholder="Email"></td></tr>
+            <tr><td><input type="password" name="password" placeholder="password"></td></tr>
+            <tr><td><input type="submit" value="Save"></td></tr>
+        </table>
+        
+    </form>
+</html>
+{{end}}

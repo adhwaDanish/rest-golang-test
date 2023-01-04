@@ -1,0 +1,17 @@
+{{define "putData"}}
+<h3>Update Users Data</h3>
+<form method="post" action="/updateUser">
+    <table>
+        <tr><td>{{.user.UserID}}</td></tr>
+        <tr><td><input type="text" name="fullName" placeholder="{{.user.FullName}}"></td></tr>
+        <tr><td><input type="text" name="email" placeholder="{{.user.Email}}"></td></tr>
+        <tr><td><input type="text" name="password" value="{{.user.Password}}"></td></tr>
+        <tr>
+            <td>
+            <input type="submit" value="Save">
+            <input type="hidden" name="uid" value="{{.user.UserID}}">
+            </td>
+        </tr>
+    </table>
+</form>
+{{end}}

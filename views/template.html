@@ -1,0 +1,37 @@
+{{define "template"}}
+<html>      
+    <h2>this is list users page</h2>      
+        
+    <body>
+        <form method="POST" action="/searchUser">
+            <input type="text" placeholder="Search Id" name="uid">
+            <input type="submit" value="Search">
+        </form>
+        <a href="/add">add users</a>
+        <table border="1">
+            <tr>
+                <th>UserID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>action</th>
+            </tr>
+            {{range .users}}
+            <tr>
+                <td>{{.UserID}}</td>
+                <td>{{.FullName}}</td>
+                <td>{{.Email}}</td>
+                <td>{{.Password}}</td>
+                <td>
+                    <a href="/update?uid={{.UserID}}">Edit</a>
+                    <a href="/delete?uid={{.UserID}}" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+                
+            </tr>
+          {{end}}  
+        </table>
+    </body>
+    
+
+</html>
+{{end}}

@@ -1,0 +1,21 @@
+{{define "searchUser"}}
+<html>
+    <h2>This is list of Searched User page</h2>
+   {{.user}}
+
+   <table border="1">
+    <tr>
+        <th>UserID</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Password</th>
+    </tr>
+    <tr>
+        <td>{{.user.UserID}}</td>
+        <td>{{.user.FullName}}</td>
+        <td>{{.user.Email}}</td>
+        <td>{{.user.Password}}</td>
+    </tr>
+  {{end}}  
+</table>
+</html>
